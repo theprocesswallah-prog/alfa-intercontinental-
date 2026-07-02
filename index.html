@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfa Intercontinental Limited | Power Infrastructure & Solar EPC</title>
+    <meta name="description" content="Alfa Intercontinental Limited is a diversified power infrastructure leader specializing in utility-scale solar EPC, precision instrument transformers, and high-voltage substation grid integrations.">
+    
+    <!-- Design System Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    
+    <!-- Global CSS Modules -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components/nav.css">
+    <link rel="stylesheet" href="css/components/interactions.css">
+    
+    <!-- GSAP Animation Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    
+    <!-- Custom Motion & Application Modules -->
+    <script src="js/motion/cursor.js" defer></script>
+    <script src="js/app.js" defer></script>
+</head>
+<body class="no-scroll">
+
+    <!-- Premium Brand Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo-wrapper">
+                <span class="preloader-logo-text">ALFA</span>
+                <span class="preloader-logo-sub">INTERCONTINENTAL</span>
+            </div>
+            <div class="preloader-progress-track">
+                <div id="preloader-bar" class="preloader-progress-bar"></div>
+            </div>
+            <div class="preloader-status">
+                <span id="preloader-percentage" class="technical-font">00</span><span class="technical-font">%</span>
+                <span class="preloader-status-text">INITIALIZING SYSTEM CHANNELS...</span>
+            </div>
+        </div>
+        <div class="preloader-panel preloader-panel-left"></div>
+        <div class="preloader-panel preloader-panel-right"></div>
+    </div>
+
+    <!-- Interactive Custom Cursor System -->
+    <div id="custom-cursor" class="custom-cursor"></div>
+    <div id="custom-cursor-follower" class="custom-cursor-follower">
+        <span class="cursor-inner-text"></span>
+    </div>
+
+    <!-- Embedded Structural Grid Lines (Brutalist Industrial Motif) -->
+    <div class="structural-grid-overlay">
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+    </div>
+
+    <!-- Premium Transparent Navigation Bar -->
+    <header class="main-header" id="main-header">
+        <div class="header-container">
+            <a href="#" class="brand-logo" data-magnetic>
+                <div class="logo-mark">
+                    <svg viewBox="0 0 40 40" width="32" height="32" class="logo-svg">
+                        <path d="M20 2L2 34H14L20 20L26 34H38L20 2Z" fill="none" stroke="#D4AF37" stroke-width="2.5" stroke-miterlimit="10"/>
+                        <line x1="20" y1="20" x2="20" y2="38" stroke="#F4D03F" stroke-width="2" />
+                    </svg>
+                </div>
+                <div class="logo-text-wrapper">
+                    <span class="logo-main-title">ALFA</span>
+                    <span class="logo-sub-title">INTERCONTINENTAL</span>
+                </div>
+            </a>
+
+            <!-- Desktop Primary Navigation Navigation -->
+            <nav class="desktop-nav" aria-label="Primary Desktop Navigation">
+                <ul class="nav-links">
+                    <li><a href="#" class="nav-link" data-link-index="1">Solar EPC</a></li>
+                    <li><a href="#" class="nav-link" data-link-index="2">Manufacturing</a></li>
+                    <li><a href="#" class="nav-link" data-link-index="3">Power Infrastructure</a></li>
+                    <li><a href="#" class="nav-link" data-link-index="4">Engineering</a></li>
+                    <li><a href="#" class="nav-link" data-link-index="5">Narrative</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="#rfq" class="btn btn-primary btn-magnetic" data-magnetic>
+                    <span class="btn-text">Request RFQ</span>
+                    <span class="btn-glint"></span>
+                </a>
+                
+                <!-- Dynamic Interactive Hamburger Trigger -->
+                <button class="hamburger-menu" id="hamburger-trigger" aria-label="Toggle Navigation Drawer" aria-expanded="false">
+                    <span class="hamburger-line line-top"></span>
+                    <span class="hamburger-line line-mid"></span>
+                    <span class="hamburger-line line-bottom"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Full-Screen Interactive Mobile Navigation Overlay -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-hidden="true">
+        <div class="drawer-background"></div>
+        <div class="drawer-container">
+            <div class="drawer-metadata">
+                <span class="technical-font color-gold">SYSTEM INFRASTRUCTURE PATHS</span>
+                <span class="drawer-divider"></span>
+            </div>
+            <ul class="drawer-nav-links">
+                <li><a href="#" class="drawer-link"><span class="link-number">01</span>Solar EPC Solutions</a></li>
+                <li><a href="#" class="drawer-link"><span class="link-number">02</span>Transformer Manufacturing</a></li>
+                <li><a href="#" class="drawer-link"><span class="link-number">03</span>Power Infrastructure Grid</a></li>
+                <li><a href="#" class="drawer-link"><span class="link-number">04</span>Engineering Quality & Labs</a></li>
+                <li><a href="#" class="drawer-link"><span class="link-number">05</span>Company Narrative</a></li>
+            </ul>
+            <div class="drawer-footer">
+                <div class="drawer-contact-info">
+                    <span class="info-label">REGIONAL HEADQUARTERS</span>
+                    <p class="info-value">Jaipur, Rajasthan, India</p>
+                    <a href="mailto:inquiry@alfaintercontinental.com" class="info-email">inquiry@alfaintercontinental.com</a>
+                </div>
+                <div class="drawer-socials">
+                    <a href="#" class="social-link">LinkedIn</a>
+                    <a href="#" class="social-link">Corporate Deck</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Immersive Page Wrapper for Smooth Scrolling Support -->
+    <main id="smooth-wrapper">
+        <div id="smooth-content">
+
+            <!-- Section 2: Cinematic Hero Section (100vh) -->
+            <section class="hero-section" id="hero-section">
+                
+                <!-- Cinematic Background Video Loop Container -->
+                <div class="hero-media-container">
+                    <div class="hero-dark-overlay"></div>
+                    <!-- Direct load path optimized background loop containing transitions from Sunrise, Solar Farm, substation and products -->
+                    <video autoplay muted loop playsinline preload="auto" class="hero-background-video" id="hero-video">
+                        <source src="https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c022273eec0885a55d11de07af72e293&profile_id=139&oauth2_token_id=57447761" type="video/mp4">
+                        <!-- Fallback background image if video processing fails -->
+                    </video>
+                    <div class="fallback-hero-image"></div>
+                </div>
+
+                <!-- Hero Section Core Content Layer -->
+                <div class="hero-content-container">
+                    <div class="hero-text-block">
+                        <div class="hero-tagline-wrapper">
+                            <span class="hero-gold-dash"></span>
+                            <span class="hero-tagline technical-font">ALFA INTERCONTINENTAL LIMITED</span>
+                        </div>
+                        
+                        <h1 class="hero-title" id="hero-main-title">
+                            <span class="title-line">WE BUILD INDIA'S</span>
+                            <span class="title-line title-highlight">ENERGY FUTURE.</span>
+                        </h1>
+                        
+                        <p class="hero-description" id="hero-sub-description">
+                            Integrating Utility-Scale Solar EPC projects, NABL-certified custom Instrument Transformer manufacturing, and heavy 132kV Power Infrastructure grid solutions into a single, high-voltage enterprise execution.
+                        </p>
+
+                        <div class="hero-action-group" id="hero-actions">
+                            <a href="#pillars" class="btn btn-primary btn-magnetic" data-magnetic>
+                                <span class="btn-text">Explore Solutions</span>
+                                <span class="btn-glint"></span>
+                            </a>
+                            <a href="#film" class="btn btn-outline" data-cursor-action="play">
+                                <span class="btn-play-icon">
+                                    <svg viewBox="0 0 24 24" width="16" height="16">
+                                        <path d="M8 5v14l11-7z" fill="currentColor"/>
+                                    </svg>
+                                </span>
+                                <span class="btn-text">Watch Documentary</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Ambient Information / Floating Side Panels -->
+                    <div class="hero-ambient-specs" id="hero-specs-panel">
+                        <div class="spec-node">
+                            <span class="spec-label technical-font">SUBSTATION CAPACITY</span>
+                            <span class="spec-value">UP TO 132KV</span>
+                        </div>
+                        <div class="spec-node">
+                            <span class="spec-label technical-font">SOLAR INFRASTRUCTURE</span>
+                            <span class="spec-value">500+ MW DELIVERED</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dynamic Bottom Scroll Anchor Indicator -->
+                <div class="hero-scroll-indicator" id="hero-scroll-anchor">
+                    <span class="indicator-text technical-font">SWEEP DOWNWARD</span>
+                    <div class="indicator-line-wrapper">
+                        <div class="indicator-active-line"></div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Remaining Sections will be built out sequentially in the next phase -->
+
+        </div>
+    </main>
+
+</body>
+</html>
